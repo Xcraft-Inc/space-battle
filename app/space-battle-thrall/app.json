@@ -8,7 +8,7 @@
   },
   "xcraft": {
     "xcraft-core-host": {
-      "mainQuest": "galaxy.boot",
+      "mainQuest": "universe.boot",
       "afterLoadQuests": []
     },
     "xcraft-core-server": {
