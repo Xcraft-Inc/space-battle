@@ -49,30 +49,6 @@
     "xcraft-core-cryo": {
       "journal": "DELETE",
       "enableFTS": true
-    },
-    "goblin-client": {
-      "appUserModelId": "Epsitec.SpaceBattle",
-      "mainGoblin": "goblin-space-battle",
-      "mainGoblinModule": "goblin-space-battle",
-      "themeContexts": ["space-battle", "theme"],
-      "useConfigurator": false,
-      "useLogin": false
-    },
-    "goblin-wm": {
-      "splashDelay": 1000,
-      "splashWindowOptions": {
-        "width": 640,
-        "height": 440,
-        "transparent": true
-      },
-      "windowOptions": {
-        "minWidth": 1200,
-        "minHeight": 800,
-        "title": "Space Battle"
-      }
-    },
-    "goblin-nabu": {
-      "storageAvailable": false
     }
   }
 }
