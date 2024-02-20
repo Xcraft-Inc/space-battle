@@ -21,7 +21,8 @@
     "got": "^11.8.2",
     "xcraft-core-book": "^1.6.2",
     "xcraft-core-cryo": "^2.8.10",
-    "xcraft-core-goblin": "^5.15.10"
+    "xcraft-core-goblin": "^5.15.10",
+    "xcraft-core-stones": "^0.4.5"
   },
   "devDependencies": {
     "chai": "^4.0.0",
