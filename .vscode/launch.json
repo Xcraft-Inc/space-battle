@@ -16,7 +16,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Space Battle Server",
+      "name": "Space Battle Thrall",
       "presentation": {"group": "space-battle"},
       "program": "${workspaceRoot}/node_modules/xcraft-core-host/bin/host",
       "args": ["--debug-child", "--log=2", "--app=space-battle-thrall"],

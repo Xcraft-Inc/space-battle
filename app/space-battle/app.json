@@ -16,7 +16,7 @@
       "powerMonitorSweeper": true
     },
     "xcraft-core-server": {
-      "modules": ["goblin-space-battle"]
+      "modules": ["goblin-space-battle-ship"]
     },
     "xcraft-core-horde": {
       "hordes": ["space-battle-thrall"],

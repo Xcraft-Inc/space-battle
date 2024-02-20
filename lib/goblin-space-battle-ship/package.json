@@ -1,7 +1,7 @@
 {
-  "name": "goblin-space-battle",
+  "name": "goblin-space-battle-ship",
   "version": "0.1.0",
-  "description": "goblin-space-battle",
+  "description": "goblin-space-battle-ship",
   "author": "",
   "license": "MIT",
   "config": {
@@ -14,6 +14,8 @@
   },
   "dependencies": {
     "fs-extra": "^9.1.0",
+    "goblin-space-battle": "^0.1.0",
+    "goblin-warehouse": "^4.2.2",
     "got": "^11.8.2",
     "xcraft-core-cryo": "^2.8.10",
     "xcraft-core-goblin": "^5.15.10",
