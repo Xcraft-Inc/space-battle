@@ -1,0 +1,34 @@
+{
+  "name": "goblin-space-battle",
+  "version": "0.1.0",
+  "description": "goblin-space-battle",
+  "author": "",
+  "license": "MIT",
+  "config": {
+    "xcraft": {
+      "commands": true
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "fs-extra": "^9.1.0",
+    "goblin-client": "^4.3.4",
+    "goblin-gadgets": "^4.0.9",
+    "goblin-nabu": "^2.2.3",
+    "goblin-warehouse": "^4.2.2",
+    "got": "^11.8.2",
+    "xcraft-core-book": "^1.6.2",
+    "xcraft-core-cryo": "^2.8.10",
+    "xcraft-core-goblin": "^5.15.10"
+  },
+  "devDependencies": {
+    "chai": "^4.0.0",
+    "mocha": "^10.3.0",
+    "goblin-theme": "^2.0.9",
+    "xcraft-dev-prettier": "^2.0.0",
+    "xcraft-dev-rules": "^4.2.4"
+  },
+  "prettier": "xcraft-dev-prettier"
+}

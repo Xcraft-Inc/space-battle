@@ -1,0 +1,78 @@
+{
+  "name": "space-battle",
+  "productName": "Space Battle",
+  "description": "Space Battle - In a galaxy far, far away",
+  "appCompany": "epsitec",
+  "appId": "space-battle",
+  "build": {
+    "win32": {"targets": ["msi"]},
+    "linux": {"targets": ["AppImage"]},
+    "darwin": {"targets": ["dmg"]}
+  },
+  "xcraft": {
+    "xcraft-core-host": {
+      "mainQuest": "earth.boot",
+      "singleInstance": true,
+      "powerMonitorSweeper": true
+    },
+    "xcraft-core-server": {
+      "modules": ["goblin-space-battle"]
+    },
+    "xcraft-core-horde": {
+      "hordes": ["space-battle-thrall"],
+      "topology": {
+        "space-battle-thrall": {
+          "host": "127.0.0.1",
+          "commanderPort": 14444,
+          "notifierPort": 15555,
+          "timeout": 3600000,
+          "passive": true
+        }
+      },
+      "connection": {
+        "useOverlay": false
+      }
+    },
+    "xcraft-core-transport": {
+      "backends": ["ee", "axon"]
+    },
+    "xcraft-core-log": {
+      "journalize": true
+    },
+    "xcraft-core-goblin": {
+      "enableCryo": true,
+      "actionsSync": {
+        "enable": true,
+        "excludeDB": []
+      }
+    },
+    "xcraft-core-cryo": {
+      "journal": "DELETE",
+      "enableFTS": true
+    },
+    "goblin-client": {
+      "appUserModelId": "Epsitec.SpaceBattle",
+      "mainGoblin": "goblin-space-battle",
+      "mainGoblinModule": "goblin-space-battle",
+      "themeContexts": ["space-battle", "theme"],
+      "useConfigurator": false,
+      "useLogin": false
+    },
+    "goblin-wm": {
+      "splashDelay": 1000,
+      "splashWindowOptions": {
+        "width": 640,
+        "height": 440,
+        "transparent": true
+      },
+      "windowOptions": {
+        "minWidth": 1200,
+        "minHeight": 800,
+        "title": "Space Battle"
+      }
+    },
+    "goblin-nabu": {
+      "storageAvailable": false
+    }
+  }
+}

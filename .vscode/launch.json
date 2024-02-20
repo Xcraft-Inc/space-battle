@@ -1,0 +1,50 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Space Battle",
+      "presentation": {"group": "space-battle"},
+      "program": "${workspaceRoot}/node_modules/xcraft-core-host/bin/host",
+      "args": ["--log=2", "--app=space-battle"],
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Space Battle Server",
+      "presentation": {"group": "space-battle"},
+      "program": "${workspaceRoot}/node_modules/xcraft-core-host/bin/host",
+      "args": ["--debug-child", "--log=2", "--app=space-battle-thrall"],
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": ":: attach by process id",
+      "processId": "${command:PickProcess}"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": ":: run zog",
+      "program": "${workspaceRoot}/node_modules/xcraft-zog/bin/zog"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": ":: test current file (mocha)",
+      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "args": ["--timeout", "999999", "--colors", "${file}"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
+}

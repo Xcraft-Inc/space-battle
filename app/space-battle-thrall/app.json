@@ -1,0 +1,38 @@
+{
+  "name": "space-battle-thrall",
+  "description": "Space Battle Server",
+  "appCompany": "epsitec",
+  "appId": "space-battle-thrall",
+  "debify": {
+    "dependencies": "iproute2"
+  },
+  "xcraft": {
+    "xcraft-core-host": {
+      "mainQuest": "galaxy.boot",
+      "afterLoadQuests": []
+    },
+    "xcraft-core-server": {
+      "modules": ["goblin-space-battle-server"]
+    },
+    "xcraft-core-bus": {
+      "host": "0.0.0.0",
+      "commanderPort": 14444,
+      "notifierPort": 15555,
+      "timeout": 3600000,
+      "acceptIncoming": false
+    },
+    "xcraft-core-transport": {
+      "backends": ["ee", "axon"]
+    },
+    "xcraft-core-goblin": {
+      "enableCryo": true,
+      "actionsSync": {
+        "enable": false,
+        "excludeDB": []
+      }
+    },
+    "xcraft-core-cryo": {
+      "enableFTS": true
+    }
+  }
+}
