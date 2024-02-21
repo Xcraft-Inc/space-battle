@@ -3,6 +3,6 @@
     "strictNullChecks": true,
     "module": "CommonJS",
     "target": "ES2022",
-    "maxNodeModuleJsDepth": 3
+    "maxNodeModuleJsDepth": 4
   }
 }
