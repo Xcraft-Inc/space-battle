@@ -46,7 +46,19 @@ notre univers).
 
 > got, json, stream, insertOrReplace
 
+### Partie 4
+
+Nous allons faire un tour rapide dans le client qui peut exploiter le serveur.
+On va voir que le client fonctionne en local first, ce qui veut dire qu'il
+n'a pas directement besoin du serveur pour fonctionner. Néanmoins, sans le
+serveur, on risque de se sentir un peu seul.
+
+On va alors découvrir la synchronisation des Elfes, puis on va localement
+pouvoir faire des recherches dans les exoplanètes.
+
+> sync, query, pickaxe
+
 ## Section 2
 
-Une fois notre serveur en place, nous pouvons nous intéresser au client.
-Des entités vont apparaîtres dans l'univers, se sont les vaisseaux (Ship).
+Des entités vont apparaîtres spontanément dans l'univers, se sont les vaisseaux (Ship).
+Il va y avoir de types de vaisseaux. Les vrais pilotes (vous) mais aussi des pirates.
