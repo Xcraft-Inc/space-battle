@@ -50,8 +50,8 @@ notre univers).
 
 Nous allons faire un tour rapide dans le client qui peut exploiter le serveur.
 On va voir que le client fonctionne en local first, ce qui veut dire qu'il
-n'a pas directement besoin du serveur pour fonctionner. Néanmoins, sans le
-serveur, on risque de se sentir un peu seul.
+n'a pas directement besoin du serveur pour fonctionner. On va utiliser le serveur
+pour récupérer les datasets afin de ne pas être tout seul dans l'univers.
 
 On va alors découvrir la synchronisation des Elfes, puis on va localement
 pouvoir faire des recherches dans les exoplanètes.
@@ -62,3 +62,29 @@ pouvoir faire des recherches dans les exoplanètes.
 
 Des entités vont apparaîtres spontanément dans l'univers, se sont les vaisseaux (Ship).
 Il va y avoir de types de vaisseaux. Les vrais pilotes (vous) mais aussi des pirates.
+
+C'est ici que le jeu commance. Le but est de créer un seul vaisseau par joueur.
+Ce vaisseau va naviguer d'astres en astres (planètes et lunes uniquements), afin
+de récupérer du minerai. Le serveur va également générer des vaisseaux, se seront
+les pirates. Personne ne sera détruit pendant la partie, mais les pirates pourront
+vous voler du minerais.
+
+Règles du jeu :
+
+0. Il est interdit de manipuler les vaisseaux des concurrents
+1. Une partie dure exactement **une minute**
+2. Chaque joueur programme ce que son vaisseau devra faire
+   - Chercher des planètes à exploiter
+   - Se déplacer sur ces planètes
+   - Extraire du minerais
+3. L'Helium-3 (He-3) est le seul minerais qui peut être utilisé comme carburant
+4. Un vaisseau sans carburant ne peut plus faire de déplacement
+5. La terre n'a pas de ressource
+6. Le gagnant est celui qui a le plus de minerais en fin de partie
+
+Pendant la partie, le serveur va effectuer les événements suivants :
+
+0. Démarrer la partie à une heure précise
+1. Introduire des vaisseaux pirates
+2. Déduire le carburant utilisé par les vaisseaux joueurs
+3. Stopper la partie après une minute
