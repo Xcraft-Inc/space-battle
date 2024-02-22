@@ -11,7 +11,7 @@
   },
   "xcraft": {
     "xcraft-core-host": {
-      "mainQuest": "galactica.boot",
+      "mainQuest": "earth.boot",
       "singleInstance": true,
       "powerMonitorSweeper": true
     },
