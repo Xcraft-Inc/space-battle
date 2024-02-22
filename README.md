@@ -60,20 +60,21 @@ pouvoir faire des recherches dans les exoplanètes.
 
 ## Section 2
 
-Des entités vont apparaîtres spontanément dans l'univers, se sont les vaisseaux (Ship).
-Il va y avoir de types de vaisseaux. Les vrais pilotes (vous) mais aussi des pirates.
+**Bienvenue dans le jeu de la Bataille Spatiale**
 
-C'est ici que le jeu commance. Le but est de créer un seul vaisseau par joueur.
+Des entités vont apparaîtres dans l'univers, se sont les vaisseaux (Ship).
+
+C'est ici que le jeu commence. Le but est de créer un seul vaisseau par joueur.
 Ce vaisseau va naviguer d'astres en astres (planètes et lunes uniquements), afin
-de récupérer du minerai. Le serveur va également générer des vaisseaux, se seront
-les pirates. Personne ne sera détruit pendant la partie, mais les pirates pourront
-vous voler du minerais.
+de récupérer du minerais. Le serveur va également générer des pirates. Personne
+ne sera détruit pendant la partie, mais les pirates pourront vous voler du
+minerais. Il n'est pas possible de localiser ou d'inspecter un vaisseau pirate.
 
 Règles du jeu :
 
 0. Il est interdit de manipuler les vaisseaux des concurrents
 1. Une partie dure exactement **une minute**
-2. Chaque joueur programme ce que son vaisseau devra faire
+2. Chaque joueur programme ce que son vaisseau devra faire pendant la partie
    - Chercher des planètes à exploiter
    - Se déplacer sur ces planètes
    - Extraire du minerais
@@ -82,9 +83,22 @@ Règles du jeu :
 5. La terre n'a pas de ressource
 6. Le gagnant est celui qui a le plus de minerais en fin de partie
 
-Pendant la partie, le serveur va effectuer les événements suivants :
+Le serveur va effectuer les événements suivants :
 
 0. Démarrer la partie à une heure précise
-1. Introduire des vaisseaux pirates
-2. Déduire le carburant utilisé par les vaisseaux joueurs
+1. Pirater les vaisseaux des joueurs
+2. Déduire le carburant utilisé par les vaisseaux
 3. Stopper la partie après une minute
+4. Calculer le tableau des scores
+
+### Fonctionnement
+
+Quand le serveur démarre une partie, il va envoyer un événement `universe.started`.
+Si vous loupez cette événement, vous n'avez pas le droit de participer. Votre
+client devra simplement attendre l'événement suivant du même type.
+
+Au moment du "start" il faudra créer l'instance de votre vaisseau en utilisant
+un identifiant réservé à cette effet. Vous devrez également donner le premier ordre
+de déplacement à ce moment là. Le point de départ est le veaisseau Galactica qui
+orbite autour de la terre, ce qui veut dire que les distances doivent se calculer
+relativement à la distance de la terre par rapport au soleil.
