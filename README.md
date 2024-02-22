@@ -88,8 +88,9 @@ Le serveur va effectuer les événements suivants :
 0. Démarrer la partie à une heure précise
 1. Pirater les vaisseaux des joueurs
 2. Déduire le carburant utilisé par les vaisseaux
-3. Stopper la partie après une minute
-4. Calculer le tableau des scores
+3. Avance les vaisseaux (tout au plus) de 50 unités par seconde
+4. Stopper la partie après une minute
+5. Calculer le tableau des scores
 
 ### Fonctionnement
 
