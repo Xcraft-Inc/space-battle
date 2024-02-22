@@ -78,28 +78,25 @@ Règles du jeu :
    - Chercher des planètes à exploiter
    - Se déplacer sur ces planètes
    - Extraire du minerais
+   - Ramener le minerais sur Terre
 3. L'Helium-3 (He-3) est le seul minerais qui peut être utilisé comme carburant
 4. Un vaisseau sans carburant ne peut plus faire de déplacement
-5. La terre n'a pas de ressource
-6. Le gagnant est celui qui a le plus de minerais en fin de partie
+5. La Terre n'a pas de ressource
+6. Le gagnant est celui qui a ramené le plus de minerais en fin de partie
 
 Le serveur va effectuer les événements suivants :
 
 0. Démarrer la partie à une heure précise
-1. Pirater les vaisseaux des joueurs
-2. Déduire le carburant utilisé par les vaisseaux
-3. Avance les vaisseaux (tout au plus) de 50 unités par seconde
-4. Stopper la partie après une minute
-5. Calculer le tableau des scores
+1. Déduire le carburant utilisé par les vaisseaux
+2. Avance les vaisseaux (tout au plus) de 50 unités par seconde
+3. Stopper la partie après une minute
+4. Calculer le tableau des scores
 
 ### Fonctionnement
 
-Quand le serveur démarre une partie, il va envoyer un événement `universe.started`.
-Si vous loupez cette événement, vous n'avez pas le droit de participer. Votre
-client devra simplement attendre l'événement suivant du même type.
+Quand le serveur démarre une partie, il va appeler le quête `tick` du Galactica.
 
-Au moment du "start" il faudra créer l'instance de votre vaisseau en utilisant
-un identifiant réservé à cette effet. Vous devrez également donner le premier ordre
-de déplacement à ce moment là. Le point de départ est le veaisseau Galactica qui
-orbite autour de la terre, ce qui veut dire que les distances doivent se calculer
-relativement à la distance de la terre par rapport au soleil.
+Au tick, vous pouvez récupérer l'instance de votre vaisseau en utilisant
+un identifiant réservé à cette effet. Le point de départ est la Terre.
+Ce qui veut dire que les distances doivent se calculer relativement à la distance
+de la Terre par rapport au soleil.
