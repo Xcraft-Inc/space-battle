@@ -16,6 +16,22 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Space Battle Viewer",
+      "presentation": {"group": "space-battle"},
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+      "windows": {
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+      },
+      "program": "${workspaceRoot}/node_modules/xcraft-core-host/bin/host",
+      "args": ["--log=2", "--app=space-battle-viewer"],
+      "outputCapture": "std",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Space Battle Thrall",
       "presentation": {"group": "space-battle"},
       "program": "${workspaceRoot}/node_modules/xcraft-core-host/bin/host",

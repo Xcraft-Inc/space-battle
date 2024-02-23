@@ -1,0 +1,70 @@
+{
+  "name": "space-battle-viewer",
+  "productName": "Space Battle Viewer",
+  "description": "Space Battle - In a galaxy far, far away",
+  "appCompany": "epsitec",
+  "appId": "space-battle-viewer",
+  "build": {
+    "win32": {"targets": ["msi"]},
+    "linux": {"targets": ["AppImage"]},
+    "darwin": {"targets": ["dmg"]}
+  },
+  "xcraft": {
+    "xcraft-core-host": {
+      "mainQuest": "space.boot",
+      "secondaryQuest": "client.start",
+      "singleInstance": true,
+      "powerMonitorSweeper": true
+    },
+    "xcraft-core-server": {
+      "modules": ["goblin-space", "goblin-laboratory"],
+      "userModulesBlacklist": "goblin-workshop"
+    },
+    "xcraft-core-horde": {
+      "hordes": ["space-battle-thrall"],
+      "topology": {
+        "space-battle-thrall": {
+          "host": "127.0.0.1",
+          "commanderPort": 14444,
+          "notifierPort": 15555,
+          "timeout": 3600000,
+          "passive": false,
+          "optimistLag": true
+        }
+      },
+      "connection": {
+        "useOverlay": true
+      }
+    },
+    "xcraft-core-transport": {
+      "backends": ["ee", "axon"]
+    },
+    "xcraft-core-log": {
+      "journalize": true
+    },
+    "xcraft-core-goblin": {
+      "enableCryo": false,
+      "actionsSync": {
+        "enable": false,
+        "excludeDB": []
+      }
+    },
+    "xcraft-core-cryo": {
+      "enableFTS": false
+    },
+    "goblin-client": {
+      "mainGoblin": "space",
+      "mainGoblinModule": "goblin-space",
+      "themeContexts": ["space", "theme"],
+      "useConfigurator": false,
+      "useLogin": false
+    },
+    "goblin-wm": {
+      "windowOptions": {
+        "minWidth": 1200,
+        "minHeight": 800,
+        "title": "Space Battle Viewer"
+      }
+    }
+  }
+}
