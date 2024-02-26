@@ -5,16 +5,15 @@
   "appCompany": "epsitec",
   "appId": "space-battle-viewer",
   "build": {
-    "win32": {"targets": ["msi"]},
+    "win32": {"targets": ["zip"]},
     "linux": {"targets": ["AppImage"]},
-    "darwin": {"targets": ["dmg"]}
+    "darwin": {"targets": ["zip"]}
   },
   "xcraft": {
     "xcraft-core-host": {
       "mainQuest": "space.boot",
       "secondaryQuest": "client.start",
-      "singleInstance": true,
-      "powerMonitorSweeper": true
+      "singleInstance": true
     },
     "xcraft-core-server": {
       "modules": ["goblin-space", "goblin-laboratory"],
@@ -35,9 +34,6 @@
       "connection": {
         "useOverlay": true
       }
-    },
-    "xcraft-core-transport": {
-      "backends": ["ee", "axon"]
     },
     "xcraft-core-log": {
       "journalize": true

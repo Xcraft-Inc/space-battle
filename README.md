@@ -10,12 +10,12 @@ Ici vous allez entraîner :
 
 1. La définition d'Elfes singleton
 2. La définition d'Elfes d'instance
-3. La définition de modèles de state (`xcraft-core-stones`)
+3. La définition de modèles de state (module `xcraft-core-stones`)
 4. La différence entre un state `Spirit` et un state `Archetype`
 5. Comment bootstrapper l'univers
 6. Créer les planètes et les lunes
 7. Créer les exoplanètes
-8. Effectuer des recherches dans les exoplanètes
+8. Effectuer des recherches dans les exoplanètes (module `xcraft-core-pickaxe`)
 
 ### Partie 1
 
@@ -66,9 +66,7 @@ Des entités vont apparaîtres dans l'univers, se sont les vaisseaux (Ship).
 
 C'est ici que le jeu commence. Le but est de créer un seul vaisseau par joueur.
 Ce vaisseau va naviguer d'astres en astres (planètes et lunes uniquements), afin
-de récupérer du minerais. Le serveur va également générer des pirates. Personne
-ne sera détruit pendant la partie, mais les pirates pourront vous voler du
-minerais. Il n'est pas possible de localiser ou d'inspecter un vaisseau pirate.
+de récupérer du minerais.
 
 Règles du jeu :
 
@@ -78,17 +76,16 @@ Règles du jeu :
    - Chercher des planètes à exploiter
    - Se déplacer sur ces planètes
    - Extraire du minerais
-   - Ramener le minerais sur Terre
 3. L'Helium-3 (He-3) est le seul minerais qui peut être utilisé comme carburant
 4. Un vaisseau sans carburant ne peut plus faire de déplacement
 5. La Terre n'a pas de ressource
-6. Le gagnant est celui qui a ramené le plus de minerais en fin de partie
+6. Le gagnant est celui qui a extrait le plus de minerais en fin de partie
 
 Le serveur va effectuer les événements suivants :
 
-0. Démarrer la partie à une heure précise
+0. Démarrer la partie
 1. Déduire le carburant utilisé par les vaisseaux
-2. Avance les vaisseaux (tout au plus) de 50 unités par seconde
+2. Avancer les vaisseaux (tout au plus) de 50 unités par seconde
 3. Stopper la partie après une minute
 4. Calculer le tableau des scores
 
