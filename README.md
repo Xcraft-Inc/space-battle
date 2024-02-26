@@ -91,9 +91,27 @@ Le serveur va effectuer les événements suivants :
 
 ### Fonctionnement
 
-Quand le serveur démarre une partie, il va appeler le quête `tick` du Galactica.
+Quand le serveur démarre une partie, il va appeler le quête `tick` du Galactica,
+avec un délai d'environ 2s par tick (approximatif).
 
 Au tick, vous pouvez récupérer l'instance de votre vaisseau en utilisant
 un identifiant réservé à cette effet. Le point de départ est la Terre.
 Ce qui veut dire que les distances doivent se calculer relativement à la distance
 de la Terre par rapport au soleil.
+
+Lors d'un tick vous devez appeler la quête `goto` ou `collect` de votre vaisseau.
+Dans le cas contraire, vous ne recevrez plus de tick jusqu'à la fin de la partie.
+Il est inutile d'appeler plus d'un `goto` ou d'un `collect` par tick (l'explication
+vient du mécanisme de synchronisation).
+
+Si vous appelez un `collect` pendant le déplacement de votre vaisseau, vous perdez
+un tour car il n'y a rien a collecter.
+
+Si au prochain tick, `state.destination` n'est pas null, alors vous n'avez pas
+encore atteint l'astre, dans ce cas vous devez appeler à nouveau la quête `goto`.
+Vous avez le droit de changer d'objectif si vous estimez qu'un astre plus proche
+deviendrait plus intéressant.
+
+> Il est possible qu'un autre astre devienne plus intéressant dans le cas où
+> d'autres joueurs auraient pris de l'avance sur vous et que l'astre cible
+> serait pillé pendant votre voyage.
