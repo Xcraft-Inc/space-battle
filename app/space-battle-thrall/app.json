@@ -21,7 +21,7 @@
       "enableCryo": true,
       "actionsSync": {
         "enable": false,
-        "excludeDB": []
+        "excludeDB": ["chronomancer"]
       }
     },
     "xcraft-core-cryo": {
