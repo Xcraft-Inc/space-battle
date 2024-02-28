@@ -33,8 +33,8 @@ du jeu de la Bataille Spatiale de la seconde partie.
 
 ### Section 2
 
-Maintenant que nous avons un univers, il est malheureusement encore vide.
-Il va falloir alors créer des planètes, des lunes et des exoplanètes.
+Maintenant que nous avons un vaisseau mère et l'univers, il manque les
+astres. Il va falloir alors créer des planètes, des lunes et des exoplanètes.
 Cette seconde partie concerne la création des objets célestes immédiats
 tels que les planètes de notre système solaire ainsi que les lunes. Notez
 que notre univers ne contiendra pas de soleil ni d'autres formes d'objets
