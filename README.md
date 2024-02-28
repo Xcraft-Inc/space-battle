@@ -3,6 +3,12 @@
 La bataille spatiale est un projet d'exercices pour les Elfes du module `xcraft-core-goblin`.
 Les exercices sont regroupés en deux sections bien distincte.
 
+## Documentations
+
+- Le site principale d'Xcraft avec sa [documentation sur les Elfes][1]
+- Le site du projet `xcraft-core-stones` et [sa documentation][2]
+- Le site du projet `xcraft-core-pickaxe` et [ses exemples][3]
+
 ## Section 1
 
 Cette section contient 4 parties permettant de se familiariser avec les Elfes.
@@ -115,3 +121,7 @@ deviendrait plus intéressant.
 > Il est possible qu'un autre astre devienne plus intéressant dans le cas où
 > d'autres joueurs auraient pris de l'avance sur vous et que l'astre cible
 > serait pillé pendant votre voyage.
+
+[1]: http://xcraft.ch/elves/
+[2]: https://github.com/Xcraft-Inc/xcraft-core-stones/blob/master/README.md
+[3]: https://github.com/Xcraft-Inc/xcraft-core-pickaxe/blob/master/lib/examples.js
