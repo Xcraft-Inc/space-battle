@@ -121,6 +121,13 @@ deviendrait plus intéressant.
 > d'autres joueurs auraient pris de l'avance sur vous et que l'astre cible
 > serait pillé pendant votre voyage.
 
+Pour avancer, votre vaisseau à besoin d'He-3. Voici le calcul qui permet de connaître
+la distance qui peut être parcourue avec une certaine quantité d'He-3.
+
+```
+distance = He3 / 1.5
+```
+
 [1]: http://xcraft.ch/elves/
 [2]: https://github.com/Xcraft-Inc/xcraft-core-stones/blob/master/README.md
 [3]: https://github.com/Xcraft-Inc/xcraft-core-pickaxe/blob/master/lib/examples.js
