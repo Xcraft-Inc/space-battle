@@ -1,15 +1,15 @@
 # Space Battle
 
 La bataille spatiale est un projet d'exercices pour les Elfes du module `xcraft-core-goblin`.
-Les exercices sont regroupés en deux sections bien distincte.
+Les exercices sont regroupés en deux parties.
 
 ## Documentations
 
-- Le site principale d'Xcraft avec sa [documentation sur les Elfes][1]
+- Le site principal d'Xcraft avec sa [documentation sur les Elfes][1]
 - Le site du projet `xcraft-core-stones` et [sa documentation][2]
 - Le site du projet `xcraft-core-pickaxe` et [ses exemples][3]
 
-## Section 1
+## Partie 1
 
 Cette section contient 4 parties permettant de se familiariser avec les Elfes.
 Ici vous allez entraîner :
@@ -23,16 +23,15 @@ Ici vous allez entraîner :
 7. Créer les exoplanètes
 8. Effectuer des recherches dans les exoplanètes (module `xcraft-core-pickaxe`)
 
-### Partie 1
+### Section 1
 
-Nous allons créer ensemble le singleton qui représente l'univers. Ce singleton
-sera utilisé par le serveur de la bataille spatiale. Le travail consistera à
-définir le singleton et de préparer les quêtes pour les parties 2 et 3 de
-cette section.
+Nous allons créer ensemble le singleton qui représente le vaisseau mère et qui
+se nomme Galactica. Ce singleton sera nécessaire pour implémenter les `tick`s
+du jeu de la Bataille Spatiale de la seconde partie.
 
-> singleton, spirit, bootstrap, quest, stones
+> singleton, spirit, quest, stones
 
-### Partie 2
+### Section 2
 
 Maintenant que nous avons un univers, il est malheureusement encore vide.
 Il va falloir alors créer des planètes, des lunes et des exoplanètes.
@@ -43,7 +42,7 @@ célestes.
 
 > instance, archetype, resource, defer, feed, smartId, create, stones
 
-### Partie 3
+### Section 3
 
 Continuons la création, mais cette fois nous allons récupérer une source de
 données distante. On va alors entraîner la création en masse et en streaming.
@@ -52,7 +51,7 @@ notre univers).
 
 > got, json, stream, insertOrReplace
 
-### Partie 4
+### Section 4
 
 Nous allons faire un tour rapide dans le client qui peut exploiter le serveur.
 On va voir que le client fonctionne en local first, ce qui veut dire qu'il
@@ -64,7 +63,7 @@ pouvoir faire des recherches dans les exoplanètes.
 
 > sync, query, pickaxe
 
-## Section 2
+## Partie 2
 
 **Bienvenue dans le jeu de la Bataille Spatiale**
 
