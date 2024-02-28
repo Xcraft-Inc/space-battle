@@ -124,6 +124,11 @@ deviendrait plus intéressant.
 Pour avancer, votre vaisseau à besoin d'He-3. Voici le calcul qui permet de connaître
 la distance qui peut être parcourue avec une certaine quantité d'He-3.
 
+Les lunes sont à la même distance que la planète autour de laquelle elles gravitent.
+De ce fait, ces voyages (au sein du même système planétaire) donneraient des
+distances à parcourir de 0. Le serveur va (dans ce cas) imputer d'office 20 de
+distance afin que ça ne puisse jamais se produire.
+
 ```
 distance = He3 / 1.5
 ```
