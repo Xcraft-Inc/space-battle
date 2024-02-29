@@ -85,24 +85,34 @@ Elles permettent d'améliorer le confort de développement dans VSCodium / VSCod
 - Ça affiche des erreurs quand un mauvais type est utilisé.
 - Les commentaires JSDoc permettent de documenter le code si on le souhaite.
 
-Ce que les annotations ne permettent pas
+Ce que les annotations ne permettent pas :
 
-- Faire des vérifications de type au runtime. Pour cela, voir `xcraft-core-stones`.
+- Faire des vérifications de type à l'exécution du programme.
+
+Une autre manière de typer le code JS est d'écrire son code en TypeScript.
+Mais ça n'est plus du JS valide et il faut passer par une phase de compilation. Le TypeScript ne permet pas non plus de faire des vérifications au runtime.
+
+Pour avoir des vérifications statiques et dynamiques, voir [xcraft-core-stones](https://github.com/Xcraft-Inc/xcraft-core-stones). Ce projet permet de définir des schémas de données en JS, de vérifier qu'une variable correspond à un schéma, ainsi que de dériver des types TypeScript utilisables dans les annotations JSDoc.
 
 ## Les types
 
-Pour les annotations de type, on peut utiliser tous les types JS de base, ainsi que les types défini dans TypeScript.
+Pour les annotations de type, on peut utiliser tous les types JS, ainsi que les types définis dans TypeScript.
 
 ### Les types de base
 
 | Type      | Exemple       |
 | --------- | ------------- |
-| any       | -             |
 | boolean   | true \| false |
 | string    | 'abc'         |
 | number    | 42            |
 | null      | null          |
 | undefined | undefined     |
+
+| Type    | Info                                          |
+| ------- | --------------------------------------------- |
+| any     | N'import quel type                            |
+| never   | Représente une valeur qui ne peut pas arriver |
+| unknown | Valeur dont on ne connait pas le type         |
 
 ### Tableaux
 
