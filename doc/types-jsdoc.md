@@ -206,6 +206,8 @@ Exemple de type : `{name: string} & {age: number}`
 
 | Type             | Info                                                 |
 | ---------------- | ---------------------------------------------------- |
+| keyof T          | Type des clés d'un objet                             |
+| T\[K]            | Type de la valeur de la clé K d'un objet             |
 | Partial\<T>      | Rend optionnel toutes les propriétés de l'objet      |
 | Pick\<T,K>       | Objet T avec seulement les propriétés listées dans K |
 | Omit\<T,K>       | Contraire de Pick, exclu les propriétés              |
