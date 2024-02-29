@@ -1,9 +1,9 @@
 {
-  "name": "space-battle",
+  "name": "space-battle-ship",
   "productName": "Space Battle",
   "description": "Space Battle - In a galaxy far, far away",
   "appCompany": "epsitec",
-  "appId": "space-battle",
+  "appId": "space-battle-ship",
   "build": {
     "win32": {"targets": ["zip"]},
     "linux": {"targets": ["zip"]},
