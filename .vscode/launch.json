@@ -4,10 +4,10 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Space Battle",
+      "name": "Space Battle Ship",
       "presentation": {"group": "space-battle"},
       "program": "${workspaceRoot}/node_modules/xcraft-core-host/bin/host",
-      "args": ["--log=2", "--app=space-battle"],
+      "args": ["--log=2", "--app=space-battle-ship"],
       "outputCapture": "std",
       "env": {
         "NODE_ENV": "development"
