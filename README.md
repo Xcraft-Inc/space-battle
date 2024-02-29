@@ -120,6 +120,10 @@ un tour car il n'y a rien a collecter.
 
 ---
 
+Vous ne pouvez pas collecter plus de 500 unités de chaque minerais par tour.
+
+---
+
 Si au prochain tick, `state.destination` n'est pas null, alors vous n'avez pas
 encore atteint l'astre, dans ce cas vous devez appeler à nouveau la quête `goto`.
 Vous avez le droit de changer d'objectif si vous estimez qu'un astre plus proche
@@ -143,7 +147,7 @@ distance = He3 / 1.5
 Les lunes sont à la même distance que la planète autour de laquelle elles gravitent.
 De ce fait, ces voyages (au sein du même système planétaire) donneraient des
 distances à parcourir de 0. Le serveur va (dans ce cas) imputer d'office 20 de
-distance afin que ça ne puisse jamais se produire.
+distance.
 
 [1]: http://xcraft.ch/elves/
 [2]: https://github.com/Xcraft-Inc/xcraft-core-stones/blob/master/README.md
