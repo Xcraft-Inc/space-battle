@@ -117,7 +117,10 @@ nécessitent plus de carburant et de temps pour les atteindre.
 ---
 
 Quand le serveur démarre une partie, il va appeler le quête `tick` du Galactica,
-avec un délai d'environ 2s par tick (approximatif).
+avec un délai (au mieux) d'environ 2s par tick, mais peut augmenter à cause de
+la nature même de ce jeu.
+
+> Ici, on triche avec le local first.
 
 ---
 
