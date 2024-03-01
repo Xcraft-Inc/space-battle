@@ -7,6 +7,12 @@
     "dependencies": "iproute2"
   },
   "xcraft": {
+    "goblin-space-battle-server": {
+      "chronomancer": {
+        "REMOVE_THIS_startTime": "0 */3 * * * *",
+        "REMOVE_THIS_resetTime": "30 2/3 * * * *"
+      }
+    },
     "xcraft-core-host": {
       "mainQuest": "universe.boot"
     },

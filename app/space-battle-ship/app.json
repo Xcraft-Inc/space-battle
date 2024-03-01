@@ -5,6 +5,11 @@
   "appCompany": "epsitec",
   "appId": "space-battle-ship",
   "xcraft": {
+    "goblin-space-battle-ship": {
+      "galactica": {
+        "REMOVE_THIS_pilot": "Here, put your 🧑‍✈️ pilot's name"
+      }
+    },
     "xcraft-core-host": {
       "mainQuest": "earth.boot",
       "singleInstance": true
