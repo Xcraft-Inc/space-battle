@@ -67,6 +67,7 @@
     "viewer": "cross-env NODE_ENV=development electron . --log=2 --app=space-battle-viewer",
     "test": "node -e \"require('child_process').spawnSync('mocha', ['--inspect', '-c', 'lib/' + JSON.parse(process.env.npm_config_argv).remain[0] + '/test'], {shell: true, stdio: 'inherit'})\" #",
     "release": "cross-env-shell GOBLINS_APP=builder \"./node_modules/.bin/zog electronify.build $npm_config_appid ../build/$npm_config_appid\"",
+    "releaseNode": "cross-env-shell GOBLINS_APP=builder \"./node_modules/.bin/zog nodify.build $npm_config_appid ../build/$npm_config_appid\"",
     "postinstall": "xcraft-complete-dev-deps . && xcraft-dev-sqlite ."
   },
   "author": "Mathieu Schroeter",
