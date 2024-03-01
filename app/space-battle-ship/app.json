@@ -4,11 +4,6 @@
   "description": "Space Battle - In a galaxy far, far away",
   "appCompany": "epsitec",
   "appId": "space-battle-ship",
-  "build": {
-    "win32": {"targets": ["zip"]},
-    "linux": {"targets": ["zip"]},
-    "darwin": {"targets": ["zip"]}
-  },
   "xcraft": {
     "xcraft-core-host": {
       "mainQuest": "earth.boot",
