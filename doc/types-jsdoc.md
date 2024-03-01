@@ -1,12 +1,15 @@
 # Annotations de types avec JSDoc
 
-_Sources :_
-[JSDoc - Wikipedia](https://fr.wikipedia.org/wiki/JSDoc) |
+_Sources :_ [JSDoc - Wikipedia](https://fr.wikipedia.org/wiki/JSDoc) |
 [JSDoc](https://jsdoc.app) |
-[JS Reference - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) |
+[JS Reference - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+|
 [TS documentation](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html)
 
-JSDoc est un langage de balisage utilisé pour documenter les codes sources JavaScript. En utilisant des commentaires qui contiennent des tags JSDoc, on peut documenter et indiquer le type des fonctions, classes et variables d'un programme. La syntaxe de JSDoc est similaire à celle de Javadoc.
+JSDoc est un langage de balisage utilisé pour documenter les codes sources
+JavaScript. En utilisant des commentaires qui contiennent des tags JSDoc, on
+peut documenter et indiquer le type des fonctions, classes et variables d'un
+programme. La syntaxe de JSDoc est similaire à celle de Javadoc.
 
 Quelques tags et leur utilisation habituelle pour l'annotation des types :
 
@@ -24,8 +27,8 @@ Quelques tags et leur utilisation habituelle pour l'annotation des types :
 
 ## Exemples
 
-Les commentaires JS se font avec `//` ou `/* ... */`.
-Pour JSdoc, on utilise `/** ... */`.
+Les commentaires JS se font avec `//` ou `/* ... */`. Pour JSdoc, on utilise
+`/** ... */`.
 
 ### Fonctions
 
@@ -89,14 +92,20 @@ Ce que les annotations ne permettent pas :
 
 - Faire des vérifications de type à l'exécution du programme.
 
-Une autre manière de typer le code JS est d'écrire son code en TypeScript.
-Mais ça n'est plus du JS valide et il faut passer par une phase de compilation. Le TypeScript ne permet pas non plus de faire des vérifications au runtime.
+Une autre manière de typer le code JS est d'écrire son code en TypeScript. Mais
+ça n'est plus du JS valide et il faut passer par une phase de compilation. Le
+TypeScript ne permet pas non plus de faire des vérifications au runtime.
 
-Pour avoir des vérifications statiques et dynamiques, voir [xcraft-core-stones](https://github.com/Xcraft-Inc/xcraft-core-stones). Ce projet permet de définir des schémas de données en JS, de vérifier qu'une variable correspond à un schéma, ainsi que de dériver des types TypeScript utilisables dans les annotations JSDoc.
+Pour avoir des vérifications statiques et dynamiques, voir
+[xcraft-core-stones](https://github.com/Xcraft-Inc/xcraft-core-stones). Ce
+projet permet de définir des schémas de données en JS, de vérifier qu'une
+variable correspond à un schéma, ainsi que de dériver des types TypeScript
+utilisables dans les annotations JSDoc.
 
 ## Les types
 
-Pour les annotations de type, on peut utiliser tous les types JS, ainsi que les types définis dans TypeScript.
+Pour les annotations de type, on peut utiliser tous les types JS, ainsi que les
+types définis dans TypeScript.
 
 ### Les types de base
 
@@ -123,7 +132,7 @@ Exemples de valeurs :
 
 ```js
 [1, 2, 3];
-['a', 'b', 'c'];
+["a", "b", "c"];
 ```
 
 ### Objets
@@ -263,7 +272,7 @@ Définir un type générique avec `@typedef`.
  */
 
 /** @type {MayBeValue<string>} */
-let maybe = {value: 'Toto'};
+let maybe = { value: "Toto" };
 ```
 
 Définir une fonction générique.
@@ -276,7 +285,7 @@ Définir une fonction générique.
  */
 function valueOrThrow(value) {
   if (value === null) {
-    throw new Error('Value is null');
+    throw new Error("Value is null");
   }
   return value;
 }
