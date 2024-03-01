@@ -3,6 +3,9 @@
   "description": "Space Battle Server",
   "appCompany": "epsitec",
   "appId": "space-battle-thrall",
+  "debify": {
+    "dependencies": "iproute2"
+  },
   "xcraft": {
     "xcraft-core-host": {
       "mainQuest": "universe.boot"

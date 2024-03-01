@@ -1,0 +1,13 @@
+{
+  "name": "builder",
+  "versionFrom": "goblin-builder",
+  "description": "Builder",
+  "appCompany": "epsitec",
+  "appId": "builder",
+  "xcraft": {
+    "xcraft-core-server": {
+      "userModulesFilter": "^goblin-",
+      "modules": ["goblin-builder", "goblin-warehouse"]
+    }
+  }
+}

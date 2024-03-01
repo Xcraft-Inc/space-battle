@@ -16,7 +16,7 @@
       "singleInstance": true
     },
     "xcraft-core-server": {
-      "modules": ["goblin-space", "goblin-laboratory"],
+      "modules": ["goblin-space"],
       "userModulesBlacklist": "goblin-workshop"
     },
     "xcraft-core-horde": {
