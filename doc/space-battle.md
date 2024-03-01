@@ -3,6 +3,16 @@
 La bataille spatiale est un projet d'exercices pour les Elfes du module
 `xcraft-core-goblin`. Les exercices sont regroupés en deux parties.
 
+Il y a 4 modules qui composent ce projet dont 3 où il y a des implémentations à
+réaliser dans le cadre de ce hackup.
+
+| Module                       | Description                                     |       |
+| ---------------------------- | ----------------------------------------------- | ----- |
+| `goblin-space`               | Interface graphique pour visualiser les parties | `[ ]` |
+| `goblin-space-battle`        | Elfes communs entre le client et le serveur     | `[×]` |
+| `goblin-space-battle-server` | Elfes qui composent le serveur                  | `[×]` |
+| `goblin-space-battle-ship`   | Elfes qui composent le client                   | `[×]` |
+
 ## Documentations
 
 - Le site principal d'Xcraft avec sa [documentation sur les Elfes][1]
