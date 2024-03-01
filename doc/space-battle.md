@@ -101,13 +101,20 @@ Règles du jeu :
 
 Le serveur va effectuer les événements suivants :
 
-0. Démarrer la partie périodiquement
-1. Déduire le carburant utilisé par les vaisseaux
-2. Avancer les vaisseaux (tout au plus) de 50 unités par seconde
-3. Stopper la partie après 150 secondes
-4. Calculer le tableau des scores (attente de 30 secondes)
+0. Générer aléatoirement des ressources sur les astres
+1. Démarrer la partie périodiquement
+2. Déduire le carburant utilisé par les vaisseaux
+3. Avancer les vaisseaux (tout au plus) de 50 unités par seconde
+4. Stopper la partie après 150 secondes
+5. Calculer le tableau des scores (attente de 30 secondes)
 
 ### Fonctionnement
+
+Les astres qui sont dans le système solaire externe ont plus de ressources que
+celles du système solaire interne. Bien entendu elles sont plus loin et
+nécessitent plus de carburant et de temps pour les atteindre.
+
+---
 
 Quand le serveur démarre une partie, il va appeler le quête `tick` du Galactica,
 avec un délai d'environ 2s par tick (approximatif).
