@@ -128,7 +128,7 @@ Exemples de valeurs :
 
 ```js
 [1, 2, 3];
-["a", "b", "c"];
+['a', 'b', 'c'];
 ```
 
 ### Objets
@@ -268,7 +268,7 @@ Définir un type générique avec `@typedef`.
  */
 
 /** @type {MayBeValue<string>} */
-let maybe = { value: "Toto" };
+let maybe = {value: 'Toto'};
 ```
 
 Définir une fonction générique.
@@ -281,7 +281,7 @@ Définir une fonction générique.
  */
 function valueOrThrow(value) {
   if (value === null) {
-    throw new Error("Value is null");
+    throw new Error('Value is null');
   }
   return value;
 }
