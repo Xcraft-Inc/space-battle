@@ -39,16 +39,18 @@ seconde partie concerne la création des objets célestes immédiats tels que le
 planètes de notre système solaire ainsi que les lunes. Notez que notre univers
 ne contiendra pas de soleil ni d'autres formes d'objets célestes.
 
-> instance, archetype, resource, defer, feed, smartId, create, stones
+> resource, defer, feed, smartId, create, stones
 
 ### Section 3
+
+Nous allons commencer par créer l'Elfe qui va représenter une exoplanète.
 
 Continuons la création, mais cette fois nous allons récupérer une source de
 données distante. On va alors entraîner la création en masse et en streaming. Il
 y a en effet beaucoup plus d'exoplanètes que de planètes et de lunes (dans notre
 univers).
 
-> got, json, stream, insertOrReplace
+> instance, archetype, got, json, stream, insertOrReplace
 
 ### Section 4
 
