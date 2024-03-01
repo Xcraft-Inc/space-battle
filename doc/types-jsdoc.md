@@ -1,10 +1,7 @@
 # Annotations de types avec JSDoc
 
-_Sources :_ [JSDoc - Wikipedia](https://fr.wikipedia.org/wiki/JSDoc) |
-[JSDoc](https://jsdoc.app) |
-[JS Reference - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
-|
-[TS documentation](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html)
+_Sources :_ [JSDoc - Wikipedia][1] | [JSDoc][2] | [JS Reference - MDN][3] | [TS
+documentation][4]
 
 JSDoc est un langage de balisage utilisé pour documenter les codes sources
 JavaScript. En utilisant des commentaires qui contiennent des tags JSDoc, on
@@ -97,10 +94,9 @@ Une autre manière de typer le code JS est d'écrire son code en TypeScript. Mai
 TypeScript ne permet pas non plus de faire des vérifications au runtime.
 
 Pour avoir des vérifications statiques et dynamiques, voir
-[xcraft-core-stones](https://github.com/Xcraft-Inc/xcraft-core-stones). Ce
-projet permet de définir des schémas de données en JS, de vérifier qu'une
-variable correspond à un schéma, ainsi que de dériver des types TypeScript
-utilisables dans les annotations JSDoc.
+[xcraft-core-stones][5]. Ce projet permet de définir des schémas de données en
+JS, de vérifier qu'une variable correspond à un schéma, ainsi que de dériver des
+types TypeScript utilisables dans les annotations JSDoc.
 
 ## Les types
 
@@ -295,3 +291,9 @@ let test = valueOrThrow(maybe.value);
 maybe.value; // type: string | null
 test; // type: string
 ```
+
+[1]: https://fr.wikipedia.org/wiki/JSDoc
+[2]: https://jsdoc.app
+[3]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+[4]: https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html
+[5]: https://github.com/Xcraft-Inc/xcraft-core-stones
