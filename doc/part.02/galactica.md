@@ -68,3 +68,8 @@ class Galactica extends Elf.Alone {
   }
 }
 ```
+
+## Désolé, pas eu le temps de mettre en place goblin-tests pour les Elfes
+
+Il faudra vous contenter du `galactica.preload` et de modifier les cronjobs dans
+`universe.js`.
