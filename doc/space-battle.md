@@ -89,21 +89,23 @@ Règles du jeu :
 0. Il est interdit de manipuler les vaisseaux des concurrents
 1. Une partie dure exactement **une minute**
 2. Chaque joueur programme ce que son vaisseau devra faire pendant la partie
-   - Chercher des planètes à exploiter
-   - Se déplacer sur ces planètes
+   - Chercher des planètes ou des lunes à exploiter
+   - Se déplacer sur ces planètes ou ces lunes
    - Extraire du minerais
 3. L'Helium-3 (He-3) est le seul minerais qui peut être utilisé comme carburant
+   et vous en avez 1000 au démarrage de la partie
 4. Un vaisseau sans carburant ne peut plus faire de déplacement
 5. La Terre n'a pas de ressource
 6. Le gagnant est celui qui a extrait le plus de minerais en fin de partie
+7. Si un tick ne mène pas à un `goto` ou un `collect`, le vaisseau sera bloqué
 
 Le serveur va effectuer les événements suivants :
 
-0. Démarrer la partie
+0. Démarrer la partie périodiquement
 1. Déduire le carburant utilisé par les vaisseaux
 2. Avancer les vaisseaux (tout au plus) de 50 unités par seconde
-3. Stopper la partie après une minute
-4. Calculer le tableau des scores
+3. Stopper la partie après 150 secondes
+4. Calculer le tableau des scores (attente de 30 secondes)
 
 ### Fonctionnement
 
@@ -114,8 +116,8 @@ avec un délai d'environ 2s par tick (approximatif).
 
 Au tick, vous pouvez récupérer l'instance de votre vaisseau en utilisant un
 identifiant réservé à cette effet. Le point de départ est la Terre. Ce qui veut
-dire que les distances doivent se calculer relativement à la distance de la
-Terre par rapport au soleil.
+dire que la première distance doit se calculer relativement à la distance de la
+Terre par rapport au soleil (votre position).
 
 ---
 
@@ -127,11 +129,12 @@ la partie. Il est inutile d'appeler plus d'un `goto` ou d'un `collect` par tick
 ---
 
 Si vous appelez un `collect` pendant le déplacement de votre vaisseau, vous
-perdez un tour car il n'y a rien a collecter.
+perdez un tour car il n'y a rien a collecter. Alors ne le faîtes pas.
 
 ---
 
 Vous ne pouvez pas collecter plus de 400 unités de chaque minerais par tour.
+Ainsi plusieurs vaisseaux peuvent collecter en même temps sur un même astre.
 
 ---
 
@@ -142,7 +145,8 @@ plus proche deviendrait plus intéressant.
 
 > Il est possible qu'un autre astre devienne plus intéressant dans le cas où
 > d'autres joueurs auraient pris de l'avance sur vous et que l'astre cible
-> serait pillé pendant votre voyage.
+> serait pillé pendant votre voyage. Alors pourquoi continuer dans cette
+> direction ?
 
 ---
 
