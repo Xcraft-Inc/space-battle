@@ -43,7 +43,6 @@
       }
     },
     "xcraft-core-cryo": {
-      "journal": "DELETE",
       "enableFTS": true
     }
   }
