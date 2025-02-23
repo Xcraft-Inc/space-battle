@@ -16,7 +16,7 @@
       "singleInstance": true
     },
     "xcraft-core-server": {
-      "modules": ["goblin-space"],
+      "modules": ["goblin-space-battle-viewer"],
       "userModulesBlacklist": "goblin-workshop"
     },
     "xcraft-core-horde": {
@@ -50,8 +50,8 @@
     },
     "goblin-client": {
       "mainGoblin": "space",
-      "mainGoblinModule": "goblin-space",
-      "themeContexts": ["space", "theme"],
+      "mainGoblinModule": "goblin-space-battle-viewer",
+      "themeContexts": ["space-battle-viewer"],
       "useConfigurator": false,
       "useLogin": false
     },
