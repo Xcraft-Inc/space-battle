@@ -3,5 +3,6 @@
   "testExplorer.useNativeTesting": true,
   "mochaExplorer.files": "lib/*/test/*.spec.js",
   "mochaExplorer.exit": true,
-  "mochaExplorer.env": {"GOBLIN_ENFORCER_LOOSE": "1"}
+  "mochaExplorer.env": {"GOBLIN_ENFORCER_LOOSE": "1"},
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
