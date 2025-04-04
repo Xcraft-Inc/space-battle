@@ -43,6 +43,7 @@
     "redux-thunk": "^2.3.0",
     "remark-gfm": "^3.0.1",
     "remark-supersub": "^1.0.0",
+    "safe-stable-stringify": "^2.5.0",
     "scroll-into-view-if-needed": "^1.4.0",
     "swc-loader": "^0.2.3",
     "traverse": "^0.6.6",
