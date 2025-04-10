@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": ":: attach to window",
+      "port": 9222,
+      "request": "attach",
+      "type": "chrome",
+      "webRoot": "${workspaceRoot}/lib/"
+    },
+    {
       "type": "node",
       "request": "launch",
       "name": "Space Battle Ship",
@@ -16,12 +23,13 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Space Battle Viewer",
+      "name": "Space Battle Viewer (backend)",
       "presentation": {"group": "space-battle"},
       "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
       "windows": {
         "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
       },
+      "runtimeArgs": ["--remote-debugging-port=9222"],
       "program": "${workspaceRoot}/node_modules/xcraft-core-host/bin/host",
       "args": ["--log=2", "--app=space-battle-viewer"],
       "outputCapture": "std",
@@ -61,6 +69,13 @@
       "args": ["--timeout", "999999", "--colors", "${file}"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Space Battle Viewer",
+      "presentation": {"group": "::bundle"},
+      "configurations": ["Space Battle Viewer (backend)", ":: attach to window"]
     }
   ]
 }
