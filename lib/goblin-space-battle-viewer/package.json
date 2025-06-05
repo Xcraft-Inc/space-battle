@@ -14,18 +14,17 @@
   },
   "dependencies": {
     "fs-extra": "^9.1.0",
-    "goblin-client": "^4.1.0",
-    "goblin-desktop": "^4.0.8",
-    "goblin-gadgets": "^4.0.0",
-    "goblin-workshop": "^3.4.0",
+    "goblin-client": "^4.3.14",
+    "goblin-desktop": "^4.0.24",
+    "goblin-gadgets": "^4.0.26",
     "got": "^11.8.2",
-    "xcraft-core-goblin": "^5.15.10",
-    "xcraft-core-stones": "^0.4.5",
-    "xcraft-core-utils": "^4.9.0"
+    "xcraft-core-goblin": "^5.45.1",
+    "xcraft-core-stones": "^0.4.16",
+    "xcraft-core-utils": "^4.18.0"
   },
   "devDependencies": {
-    "chai": "^4.0.0",
-    "mocha": "^10.3.0",
+    "chai": "^5.2.0",
+    "mocha": "^11.5.0",
     "xcraft-dev-prettier": "^2.0.0",
     "xcraft-dev-rules": "^4.2.4"
   },

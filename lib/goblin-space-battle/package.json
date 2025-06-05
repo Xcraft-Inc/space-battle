@@ -13,13 +13,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "xcraft-core-cryo": "^2.8.10",
-    "xcraft-core-goblin": "^5.15.10",
-    "xcraft-core-stones": "^0.4.5"
+    "xcraft-core-cryo": "^2.26.5",
+    "xcraft-core-goblin": "^5.45.1",
+    "xcraft-core-stones": "^0.4.16"
   },
   "devDependencies": {
-    "chai": "^4.0.0",
-    "mocha": "^10.3.0",
+    "chai": "^5.2.0",
+    "mocha": "^11.5.0",
     "xcraft-dev-prettier": "^2.0.0",
     "xcraft-dev-rules": "^4.2.4"
   },
