@@ -6,7 +6,6 @@
   "appId": "builder",
   "xcraft": {
     "xcraft-core-server": {
-      "userModulesFilter": "^goblin-",
       "modules": ["goblin-builder", "goblin-warehouse"]
     }
   }
